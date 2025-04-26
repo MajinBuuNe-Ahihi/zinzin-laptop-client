@@ -1,0 +1,52 @@
+
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+.item-social {
+    @apply flex gap-2.5 items-center;
+}
+
+.currency :where(.i-solar\:dollar-line-duotone) {
+    display: inline-block;
+    width: 20px; 
+    height:20px; 
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    --svg: url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cg fill='none' stroke='black' stroke-width='1.5'%3E%3Ccircle cx='12' cy='12' r='10' opacity='.5'/%3E%3Cpath stroke-linecap='round' d='M12 6v12m3-8.5C15 8.12 13.657 7 12 7S9 8.12 9 9.5s1.343 2.5 3 2.5s3 1.12 3 2.5s-1.343 2.5-3 2.5s-3-1.12-3-2.5'/%3E%3C/g%3E%3C/svg%3E);
+}
+
+.currency :where(.i-lucide\:chevron-down) {
+    display: inline-block;
+    width: 20px; 
+    height:20px; 
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    padding: 0;
+    --svg: url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m6 9l6 6l6-6'/%3E%3C/svg%3E);
+}
+.pe-2\.5 {
+    padding-inline-end: 0;
+}
+
+[data-state="unchecked"] {
+    color:  black  !important;
+}
+
+[data-state="checked"] {
+    color:  rgb(255, 255, 255) !important;
+}
+
+[role][data-state="checked"] {
+    color:  rgb(10, 10, 10) !important;
+}
+

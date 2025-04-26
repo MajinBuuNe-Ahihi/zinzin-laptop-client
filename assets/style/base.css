@@ -1,0 +1,68 @@
+/* RESET CSS CƠ BẢN */
+@import "tailwindcss";
+@import "@nuxt/ui";
+:root {
+  --bg-pattern-opacity: 0.36;
+  --bg-pattern-animation-name: none;
+  --bg-pattern-animation-direction: normal;
+  --bg-pattern-animation-speed: 2.5s;
+  --bg-pattern-animation-speed-mult: 1;
+  --bg-pattern-top: auto;
+  --bg-pattern-left: auto;
+  --bg-pattern-right: auto;
+  --bg-pattern-bottom: auto;
+  --bg-pattern-width: 100%;
+  --bg-pattern-height: 100%;
+  --color-scheme-box-shadow-drop: 0 5px 20px rgba(0, 0, 0, 0.4);
+  --color-scheme-highlight: linear-gradient(115deg, #3e7ae1, #3ee1dc);
+  --color-scheme-pattern: #5975a3;
+  --color-scheme-primary-button-bg: linear-gradient(115deg, #4072c7, #40c7c3);
+  --color-scheme-primary-button-bg-hover: #3081a4;
+  --color-scheme-primary-button-text: #ffffff;
+  --color-scheme-primary-button-border: #3e8fb3;
+  --color-scheme-secondary-button-bg: #dde6f9;
+  --color-scheme-secondary-button-bg-hover: #b2c6f1;
+  --color-scheme-secondary-button-text: #374051;
+  --color-scheme-secondary-button-border: #202020;
+  --color-scheme-icon: #383838;
+  --color-scheme-links: #383838;
+  --color-scheme-text: #ffffff;
+  --color-scheme-bg: #4a4a4a;
+  --color-scheme-border: #171717;
+  --color-scheme-bg-gradient: linear-gradient(
+    319deg,
+    rgba(15, 27, 47, 1),
+    rgba(159, 162, 173, 1) 100%
+  );
+  --bg-pattern-color: linear-gradient(319deg, rgba(15, 27, 47, 1), rgba(159, 162, 173, 1) 100%);
+    --bg-pattern-src: url(//multi-themes.myshopify.com/cdn/shop/t/60/assets/pattern-bubbles.svg?v=1434749…);
+    --bg-pattern-size: 100.0px;
+    --bg-pattern-animation-speed-mult: 1;
+    --bg-pattern-animation-speed: 4.0s;
+    --bg-pattern-animation-name: pattern-top;
+    --bg-pattern-bottom: calc(var(--bg-pattern-size) * -1);
+    --bg-pattern-height: calc(100% + var(--bg-pattern-size));
+}
+@theme static {
+  --font-sans: "Public Sans", sans-serif;
+
+  --breakpoint-3xl: 1920px;
+
+  --color-primary-color: #402249;
+  --ui-text-dimmed: #FFFFF;
+  --color-nav: #3e3e3e;
+  --color-white: #ffffff;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: system-ui, sans-serif;
+  background-color: #f7f7f7;
+  color: black;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+
+}

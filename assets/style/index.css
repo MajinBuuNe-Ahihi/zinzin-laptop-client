@@ -1,0 +1,176 @@
+@import "./base.css";
+
+.bg-tic-tac-toe {
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(
+      330deg,
+      rgba(25, 34, 34, 1) 33%,
+      rgba(93, 90, 53, 1) 100%
+    )
+    transparent;
+}
+
+.bg-tic-tac-toe .animation-icon {
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  width: 200%;
+  height: calc(100% + 100px);
+  position: absolute;
+  will-change: transform;
+  isolation: isolate;
+  background: #5975a3;
+  opacity: 0.5;
+  -webkit-mask-image: url("../images/pattern-tic-tac-toe.svg");
+  -webkit-mask-repeat: repeat;
+  -webkit-mask-size: 100px auto;
+  animation: topleft 4s normal infinite linear;
+}
+
+.bg-translate {
+  overflow: hidden;
+  position: relative;
+}
+
+.animation-icon {
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  will-change: transform;
+  isolation: isolate;
+  opacity: 0.5;
+  -webkit-mask-repeat: repeat;
+  -webkit-mask-size: 100px auto;
+  z-index: 0;
+}
+
+.bg-tic-tac-toe {
+  background: linear-gradient(
+      330deg,
+      rgba(25, 34, 34, 1) 33%,
+      rgba(93, 90, 53, 1) 100%
+    )
+    transparent;
+}
+
+.bg-tic-tac-toe .animation-icon {
+  -webkit-mask-image: url("../images/pattern-tic-tac-toe.svg");
+  animation: topleft 4s normal infinite linear;
+}
+
+.bg-bubble {
+  background: linear-gradient(
+      319deg,
+      rgba(15, 27, 47, 1),
+      rgba(159, 162, 173, 1) 100%
+    )
+    transparent;
+}
+
+.bg-bubble .animation-icon {
+  -webkit-mask-image: url("../images/pattern-bubbles.svg");
+  animation: top 4s normal infinite linear;
+}
+
+.bg-bubble .animation-icon.bottom {
+  height: 500%;
+  top: -100px;
+  -webkit-mask-image: url("../images/pattern-bubbles.svg");
+  animation: bottom 4s normal infinite linear;
+}
+
+.bg-bank-note {
+  background: radial-gradient(rgba(159, 131, 122, 1), rgba(65, 50, 41, 1) 100%)
+    transparent;
+}
+
+.bg-bank-note .animation-icon {
+  background-color: #cfceb6;
+  -webkit-mask-image: url("../images/pattern-bank-note.svg");
+  animation: transx 4s normal infinite linear;
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.loading-placeholder {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    will-change: transform;
+    left: -100%;
+    width: 200%;
+    background: linear-gradient(145deg, #fff, #fffdfd52, #ffffff1f);
+    background-repeat: no-repeat;
+    animation: placeHolderShimmer 1s infinite linear forwards;
+}
+
+.image-contain:hover .loading-placeholder{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.158), #ffffff67);
+    transform: translate3d(-200%, 0, 0) skew(-25deg);
+}
+
+@keyframes topleft {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translate3d(
+      calc(100px * -1),
+      calc(100px * -1),
+      calc(100px * -1)
+    );
+  }
+}
+
+@keyframes top {
+  0% {
+    transform: translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, calc(100px * -1), 0);
+  }
+}
+@keyframes bottom {
+  0% {
+    transform: translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, calc(100px * 1), 0);
+  }
+}
+
+@keyframes transx {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translate3d(calc(100px * -1), 0, 0);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes placeHolderShimmer {
+  50% {
+    transform: translateX(200%);
+  }
+}
